@@ -16,7 +16,7 @@ export const PROJECTS = [
     title: "Engineering Calculator Suite",
     description: "A practical utility set for technical calculations, designed with clarity and usability in mind.",
     tags: ["Python", "UI", "Logic", "Tooling"],
-    link: "/case-study-calculator.html"
+    link: "/case-study/calculator"
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const PROJECTS = [
     title: "Real-Time Water Quality Analytics Dashboard",
     description: "An IoT-based monitoring experience for water purity detection and analytics, combining sensing data with a visual dashboard.",
     tags: ["IoT", "Pandas", "Visualization", "Data"],
-    link: "/case-study.html"
+    link: "/case-study/hydronix"
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ export const PROJECTS = [
     title: "AI Live Coach",
     description: "An educational platform with voice-synchronized learning experiences built using browser-native speech APIs.",
     tags: ["Web Speech API", "React", "UX", "Interactivity", "Machine Learning"],
-    link: "/case-study-ai-coach.html"
+    link: "/case-study/ai-coach"
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ export const PROJECTS = [
     title: "Newflex",
     description: "A design-heavy technical portfolio built to showcase modern web aesthetics, 3D motion, glassmorphism, and responsive UI systems.",
     tags: ["React", "Three.js", "Glass UI", "Motion"],
-    link: "/case-study-newflex.html"
+    link: "/case-study/newflex"
   }
 ];
 

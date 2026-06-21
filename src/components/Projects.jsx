@@ -1,5 +1,6 @@
 import React from 'react';
 import { PROJECTS } from '../data/constants';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Projects = ({ selectedSkill }) => {
@@ -55,10 +56,10 @@ const Projects = ({ selectedSkill }) => {
 
                 <div className="mt-auto z-10">
                   {project.link ? (
-                    <a href={project.link} className="inline-flex items-center gap-2 text-sm font-bold text-black group-hover:text-[#FF6A00] transition-colors">
+                    <Link to={project.link} className="inline-flex items-center gap-2 text-sm font-bold text-black group-hover:text-[#FF6A00] transition-colors">
                       View Case Study
                       <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
+                    </Link>
                   ) : (
                     <span className="inline-flex items-center gap-2 text-sm font-bold text-gray-400 cursor-not-allowed">
                       Case Study Coming Soon

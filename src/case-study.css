@@ -1,0 +1,83 @@
+.case-study-wrapper {
+  background-color: #04070d;
+  color: #edf4ff;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+.case-study-wrapper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(143, 215, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 215, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: -1;
+}
+.glass-card {
+  background: rgba(10, 15, 25, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+.glass-card.highlight {
+  border: 1px solid rgba(220, 180, 100, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.glass-card.highlight::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(220, 180, 100, 0.15);
+  filter: blur(40px);
+  border-radius: 50%;
+}
+.pill {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.875rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+.terminal {
+  background: #070a12;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+.terminal-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.dot.red { background: rgba(239, 68, 68, 0.8); }
+.dot.yellow { background: rgba(234, 179, 8, 0.8); }
+.dot.green { background: rgba(34, 197, 94, 0.8); }
+
+.animate-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }

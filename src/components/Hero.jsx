@@ -65,7 +65,7 @@ const Hero = () => {
           {/* Social Icons */}
           <div className="flex gap-4">
             {[
-              { Icon: Linkedin, href: "#", name: "Linkedin" },
+              { Icon: Linkedin, href: "https://www.linkedin.com/in/ruthra-moorthy-51a0383a7", name: "Linkedin" },
               { Icon: Github, href: "https://github.com/ruthram667-tech", name: "Github" },
               { Icon: Twitter, href: "#", name: "Twitter" },
               { Icon: MessageCircle, href: "https://wa.me/919363931903", name: "WhatsApp" },

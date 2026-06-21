@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Calculator Suite — Case Study</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { margin: 0; font-family: 'Inter', sans-serif; background-color: #04070d; color: #edf4ff; }
+    body::before { content: ""; position: fixed; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(143, 215, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(143, 215, 255, 0.03) 1px, transparent 1px); background-size: 60px 60px; z-index: -1; }
+    .glass-card { background: rgba(10, 15, 25, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45); }
+    .glass-card.highlight { border: 1px solid rgba(220, 180, 100, 0.3); position: relative; overflow: hidden; }
+    .glass-card.highlight::before { content: ""; position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(220, 180, 100, 0.15); filter: blur(40px); border-radius: 50%; }
+    .pill { padding: 0.5rem 1rem; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.05); font-size: 0.875rem; font-weight: 500; backdrop-filter: blur(8px); }
+    .terminal { background: #070a12; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; overflow: hidden; }
+    .terminal-header { display: flex; align-items: center; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.05); }
+    .terminal-dots { display: flex; gap: 0.5rem; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot.red { background: rgba(239, 68, 68, 0.8); }
+    .dot.yellow { background: rgba(234, 179, 8, 0.8); }
+    .dot.green { background: rgba(34, 197, 94, 0.8); }
+    .animate-up { opacity: 0; transform: translateY(20px); animation: slideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+    @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+  <nav class="max-w-6xl mx-auto px-6 py-6 animate-up"><a href="index.html" class="text-[#8fd7ff] hover:text-white transition-colors flex items-center gap-2 font-medium">&larr; Back to Portfolio</a></nav>
+  
+  <header class="max-w-6xl mx-auto px-6 pt-12 pb-20 border-b border-white/10 animate-up" style="animation-delay: 0.1s">
+    <span class="text-[#8fd7ff] text-sm font-bold tracking-widest uppercase mb-4 block">Tooling • Logic • Python</span>
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Engineering Calculator Suite</h1>
+    <p class="text-[#acc4ea] text-xl md:text-2xl max-w-3xl mb-10 leading-relaxed">A practical utility set for technical calculations, designed with clarity, speed, and usability in mind.</p>
+    <div class="flex flex-wrap gap-3"><span class="pill">Python</span><span class="pill">UI Design</span><span class="pill">Algorithms</span></div>
+  </header>
+
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="glass-card p-8 animate-up" style="animation-delay: 0.2s">
+        <h3 class="text-2xl font-bold mb-4 text-white">The Challenge</h3>
+        <p class="text-[#acc4ea] leading-relaxed text-sm">Engineers often switch between multiple disconnected tools for unit conversions and technical formulas, leading to fragmented workflows and potential calculation errors.</p>
+      </div>
+      <div class="glass-card highlight p-8 animate-up" style="animation-delay: 0.3s">
+        <h3 class="text-2xl font-bold mb-4 text-white">The Solution</h3>
+        <p class="text-[#acc4ea] leading-relaxed text-sm">Developed a centralized, Python-based utility suite focused on modularity and high-precision outputs. The architecture leverages clean logic separation to ensure that each calculation module remains decoupled from the interface, allowing for rapid scaling and easy maintenance.</p>
+      </div>
+      <div class="glass-card p-8 animate-up" style="animation-delay: 0.4s">
+        <h3 class="text-2xl font-bold mb-4 text-white">The Result</h3>
+        <p class="text-[#acc4ea] leading-relaxed text-sm">A highly efficient, user-centric toolset that streamlines complex engineering tasks, providing a professional environment for rapid data verification and technical problem-solving.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 pb-32 animate-up" style="animation-delay: 0.5s">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="terminal shadow-2xl">
+        <div class="terminal-header">
+          <div class="terminal-dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+          <span class="ml-4 text-xs text-white/40 font-mono">math_engine.py</span>
+        </div>
+        <div class="p-6 overflow-x-auto"><pre class="text-sm font-mono text-[#8fd7ff] leading-relaxed"><code>def compute_structural_load(matrix_tensor):
+    """
+    Evaluates stress factors across the beam
+    matrix in constant time.
+    """
+    optimized_matrix = np.linalg.inv(matrix_tensor)
+    
+    if np.any(optimized_matrix > SAFE_LIMIT):
+        raise OverloadError("Threshold exceeded")
+        
+    return optimized_matrix.sum(axis=1)</code></pre></div>
+      </div>
+      <div class="h-full min-h-[300px] rounded-2xl border border-dashed border-white/20 bg-white/5 flex flex-col items-center justify-center relative overflow-hidden group">
+        <div class="text-center z-10 p-6">
+          <span class="block text-[#acc4ea] font-medium mb-2">Computation Architecture Diagram</span>
+          <span class="text-xs text-white/40">Data Input &rarr; Vector Processing &rarr; UI Rendering</span>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-[#8fd7ff]/0 to-[#dcb464]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
